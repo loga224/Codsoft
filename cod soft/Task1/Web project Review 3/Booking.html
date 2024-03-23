@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Booking Form</title>
+  <style>
+  h1{
+    padding: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 3rem; /* Set the font size to a large, readable size */
+    font-weight: bold; /* Make the text bold for emphasis */
+    text-align: center; /* Center the text within its container */
+    text-transform: uppercase; /* Transform the text to all uppercase */
+    color:white;/* Set the text color to a dark gray */
+    letter-spacing: 2px; /* Add a little bit of spacing between the letters */
+    margin-bottom: 2rem; /* Add some space below the heading */
+    background:linear-gradient(#1693ec,rgb(178, 184, 18));
+     /* Add a black border around the element */
+    border-radius: 20px; /* Cut the edge of the border */
+    border-color: rgba(245, 241, 241, 0.888);
+    border: 1px solid #fff;
+    width:50%;
+    }
+  body{
+    min-height: 100vh;
+    background: url(Booking.png) no-repeat;
+    background-size: cover;
+  }
+/* Form layout */
+.form-container {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background:linear-gradient(#1693ec,rgb(178, 184, 18));
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #888888;
+  width:50%;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-row select {
+  height: 40px;
+}
+
+/* Buttons */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #3e8e41;
+}
+
+/* Pop-up window */
+.bill-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bill {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bill h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bill p {
+  margin-bottom: 10px;
+}
+
+.bill strong {
+  font-weight: bold;
+}
+input[type="text"], input[type="date"] {
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+input[type="button"] {
+  background-color: rgb(102, 223, 50);
+  color: white;
+  padding: 40px;
+  border-radius: 5px;
+  border: none;
+  width: 10%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #0a0b0a;
+}
+label{
+  color: #fff;font-size:larger;font-weight: bold;align-content: center;
+}
+button[type="submit"] {
+  background-color: #4CAF50; /* Set the background color */
+  color: white; /* Set the text color */
+  padding: 12px 20px; /* Add some padding */
+  border: none; /* Remove the border */
+  border-radius: 4px; /* Add rounded corners */
+  cursor: pointer; /* Add a pointer cursor */
+}
+
+/* Change the background color of the button when hovered */
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+  </style>
+</head>
+<body>
+  <center>
+  <h1 style="color: white;text-align: center;font-weight: bold;">Event Booking Form</h1>
+  </center>
+  <form onsubmit="return generateBill()" class="form-container">
+    <!-- Collect information about the event -->
+    <div class="form-row">
+    <label for="Name">Event Name</label>
+    <input type="text" name="Name">
+    <label>Date:</label>
+    <input type="date" name="date"><br>
+
+    <label>Time:</label>
+    <input type="time" name="time"><br>
+
+    <label>Location:</label>
+    <input type="text" name="location"><br>
+
+    <label>Number of Attendees:</label>
+    <input type="number" name="attendees"><br>
+
+    <label>Type of Event:</label>
+    <select name="event-type">
+      <option value="normal">Normal</option>
+      <option value="high-class">High class</option>
+      <option value="premium">Premium</option>
+    </select><br>
+
+    <!-- Book the hall -->
+    <h2>Hall Booking Form</h2>
+    <label>Number of Tables:</label>
+    <input type="number" name="tables"><br>
+
+    <label>Number of Chairs:</label>
+    <input type="number" name="chairs"><br>
+
+    <!-- Book catering -->
+    <h2>Catering Booking Form</h2>
+    <label>Menu:</label>
+    <textarea name="menu"></textarea><br>
+
+    <label>Dietary Restrictions:</label>
+    <input type="text" name="dietary-restrictions"><br>
+
+    <!-- Book decoration -->
+    <h2>Decoration Booking Form</h2>
+    <label>Theme:</label>
+    <input type="text" name="theme"><br>
+
+    <label>Color Scheme:</label>
+    <input type="text" name="color-scheme"><br>
+
+    <button type="submit" >Submit</button>
+  </div>
+  </form>
+
+  <script>
+    // Define the expenses for each service based on the type of event
+    const expenses = {
+      normal: {
+        hall: 500,
+        catering: 50000,
+        decoration: 20000
+      },
+      "high-class": {
+        hall: 1000,
+        catering: 75000,
+        decoration: 35000
+      },
+      premium: {
+        hall: 2000,
+        catering: 100000,
+        decoration: 50000
+      }
+    };
+
+    function generateBill() {
+      // Get the values of the form fields
+      const eventType = document.getElementsByName('event-type')[0].value;
+      const hallTables = parseInt(document.getElementsByName('tables')[0].value);
+      const hallChairs = parseInt(document.getElementsByName('chairs')[0].value);
+      const cateringMenu = document.getElementsByName('menu')[0].value;
+      const dietaryRestrictions = document.getElementsByName('dietary-restrictions')[0].value;
+      const decorationTheme = document.getElementsByName('theme')[0].value;
+      const colorScheme = document.getElementsByName('color-scheme')[0].value;
+
+      // Calculate the total cost
+      const totalCost = expenses[eventType].hall * hallTables + expenses[eventType].catering + expenses[eventType].decoration;
+
+      // Generate the bill in a pop-up window
+      const billMessage = `Total Cost: $${totalCost}\nHall Cost: $${expenses[eventType].hall * hallTables}\nCatering Cost: $${expenses[eventType].catering}\nDecoration Cost: $${expenses[eventType
+        ].decoration}\n\nBooking Details:\nTables: ${hallTables}\nChairs: ${hallChairs}\nMenu: ${cateringMenu}\nDietary Restrictions: ${dietaryRestrictions}\nTheme: ${decorationTheme}\nColor Scheme: ${colorScheme}`;
+
+window.alert(billMessage);
+
+return false; // Prevent form submission
+}
+</script>
+</body>
+</html>

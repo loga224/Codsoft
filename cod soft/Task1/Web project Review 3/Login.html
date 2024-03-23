@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <style>
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Login.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.login-container {
+  background:linear-gradient(#18517a,rgb(205, 31, 187));
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #888888;
+  width:40%;
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+input[type="button"] {
+  background-color: rgb(102, 223, 50);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #0a0b0a;
+}
+
+#message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+  </style>
+  <body>
+	<header>
+        <h2 class="logo"><a href=Home.html >EVENTEASY</a></h2>
+        <nav class="navigation">
+            <a href="Home.html"><span class="icon"><ion-icon name="home-outline"></ion-icon></span> Home</a>
+            <a href="About.html"><span class="icon"><ion-icon name="document-outline"></ion-icon></span> About</a>
+            <a href="Services.html"><span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span> Services</a>
+            <a href="Contact.html"><span class="icon"><ion-icon name="call-outline"></ion-icon></span> Contact</a>
+            <a href="Login.html"><span class="icon"><ion-icon name="log-in-outline"></ion-icon></span> Login</a>
+        </nav>
+    </header>
+    <div class="login-container">
+      <h1 style="color: #fff;">Log in</h1><br>
+      <form id="login-form">
+        <h1 style="color: #fff;font-size:larger;font-weight: bold;align-content: center;">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <h1 style="color: #fff;font-size:larger;font-weight: bold;">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="button" value="Login" onclick="validate()">
+      </form>
+      <p id="message"></p>
+    </div>
+    <script>
+ function validate() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  if (username == "Mani" && password == "Mani") {
+    document.getElementById("message").innerHTML = "Login successful!";
+    window.location.href = "Booking.html";
+
+  } else {
+    document.getElementById("message").innerHTML = "Invalid username or password.";
+  }
+}
+
+	</script>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

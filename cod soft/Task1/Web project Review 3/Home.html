@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    h1{
+    padding: 25px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 3rem; /* Set the font size to a large, readable size */
+    font-weight: bold; /* Make the text bold for emphasis */
+    text-align: center; /* Center the text within its container */
+    text-transform: uppercase; /* Transform the text to all uppercase */
+    color:white;/* Set the text color to a dark gray */
+    letter-spacing: 2px; /* Add a little bit of spacing between the letters */
+    margin-bottom: 2rem; /* Add some space below the heading */
+    background:linear-gradient(#6710d2,rgb(178, 184, 18));
+     /* Add a black border around the element */
+    border-radius: 20px; /* Cut the edge of the border */
+    border-color: rgba(245, 241, 241, 0.888);
+    border: 1px solid #fff;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo"><a href=Home.html>EVENTEASY</a></h2>
+        <nav class="navigation">
+            <a href="Home.html"><span class="icon"><ion-icon name="home-outline"></ion-icon></span> Home</a>
+            <a href="About.html"><span class="icon"><ion-icon name="document-outline"></ion-icon></span> About</a>
+            <a href="Services.html"><span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span> Services</a>
+            <a href="Contact.html"><span class="icon"><ion-icon name="call-outline"></ion-icon></span> Contact</a>
+            <button class="About" onclick="login()">Login</button>
+        </nav>
+    </header>
+    
+    <center>
+        <h1>  We are here to make your Event Easy  </h1>     
+        <button class="About" onclick="About()">See About us</button>
+    </center>
+    <script>
+        function login(){
+            window.location.href = "Login.html";
+        }
+        function About(){
+            window.location.href = "About.html";
+        }
+    </script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

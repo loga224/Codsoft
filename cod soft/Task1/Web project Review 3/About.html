@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.section{
+    margin-top: 100px;
+    width: 100%;
+    min-height: 100vh;background:linear-gradient(#1693ec,rgb(178, 184, 18));
+    
+}
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.content-section{
+    float: left;
+    width: 55%;
+    margin-left: -40px;
+    margin-top: -20px;
+}
+.image-section{
+    float: right;
+    width: 40%;
+    margin-top: 50px;
+    margin-right: -40px;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-top: 0px;
+}
+.content-section .content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 21px;
+}
+.content-section .content p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content-section .content .button{
+    margin-top: 30px;
+}
+
+.content-section .content .button a{
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+    background-color: #7bcf31;
+    color: #fff;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo"><a href=Home.html >EVENTEASY</a></h2>
+        <nav class="navigation">
+            <a href="Home.html"><span class="icon"><ion-icon name="home-outline"></ion-icon></span> Home</a>
+            <a href="About.html"><span class="icon"><ion-icon name="document-outline"></ion-icon></span> About</a>
+            <a href="Services.html"><span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span> Services</a>
+            <a href="Contact.html"><span class="icon"><ion-icon name="call-outline"></ion-icon></span> Contact</a>
+            <button class="About" onclick="login()">Login</button>
+        </nav>
+    </header>
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1 style="color: white;">About us</h1>
+                </div>
+                <div class="content">
+                    <h3 style="display: block;color: #1d3b02;">Welcome to Easy Event management</h3>
+                    <p style="text-align: justify;text-decoration: solid;font-family: 'Times New Roman', Times, serif;font-size:larger;font-weight:500;color: #112102;">"Welcome to EventEasy , where we turn your vision into a reality. We are a full-service event planning and management company with a passion for creating unforgettable experiences. Our team of expert planners has years of experience in designing and executing events of all sizes, from corporate meetings to grand weddings. We understand the importance of every detail and work closely with our clients to ensure their vision is brought to life. With a focus on innovation and creativity, we are committed to delivering events that exceed expectations and leave a lasting impression. Our mission is to make your event a success, so let us take care of the planning and execution while you sit back and enjoy the show."</p>
+                    <div class="button">
+                        <a href="Services.html">Our Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="Aboutus.jpg">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+      function login(){
+            window.location.href = "Login.html";
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
